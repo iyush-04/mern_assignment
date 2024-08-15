@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom, #f7f7f7, #e7e7e7);
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-control {
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .input-group-text {
+            background-color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .btn-primary {
+            background-color: #0072b1;
+            border-color: #0072b1;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 10px;
+        }
+        .btn-primary:hover {
+            background-color: #006097;
+            border-color: #006097;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <h1 style="font-style: italic; font-family:Georgia, 'Times New Roman', Times, serif;"> LinkedIn</h1>
+            <form>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="glyphicon glyphicon-user"></i></span>
+                    <input type="text" id="username" class="form-control" placeholder="Email or Phone">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input type="password" id="password" class="form-control" placeholder="Password">
+                </div>
+                <button class="btn btn-primary" onclick="f1();f2()">Sign in</button>
+                <p style="font-size: 14px; padding-top: 10px;">New to LinkedIn? <a href="/">Join now</a></p>
+            </form>
+        </div>
+    </center>
+
+    <script>
+        function f1(){
+            var x = document.getElementById('password').value;
+            var count = x.length
+            if(count<7){
+                window.alert("Password needs to be more than 7 characters")
+            }
+        }
+        function f2(){
+            var y = document.getElementById('username').value;
+            if(y==""){
+                window.alert("Email or Phone number is required")
+            }
+        }
+    </script>
+</body>
+</html>
